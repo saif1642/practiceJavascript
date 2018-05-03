@@ -4,13 +4,14 @@
 
 // var randomNumber = Math.random()*range+1;
 
-function getRandom(max,min){
-   var Number = Math.floor(Math.random() * (max - min + 1)) + min;
-   return Number;
-}
+function getRandomInteger(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
 var minRange = prompt('Enter the minimum range');
 var maxRange = prompt('Enter the maximum range');
-var randomNumber = getRandom(maxRange,minRange);
+var randomNumber = getRandomInteger(minRange,maxRange);
 console.log(randomNumber);
 document.write("Generated Random Number between "+minRange +" and "+maxRange+" is: "+randomNumber);
