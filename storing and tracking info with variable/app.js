@@ -12,9 +12,14 @@
 
 //Making a Story board
 
-var visitorAdjective = prompt('Enter a Adjective');
-var visitorVerb = prompt('Enter a Verb');
-var visitorNoun =prompt('Enter a Noun');
+var q = 3;
+var questionsLeft = ' [ '+q+ " questions left to answer " +']'
+
+var visitorAdjective = prompt('Enter a Adjective '+questionsLeft);
+q-=1;
+var visitorVerb = prompt('Enter a Verb '+questionsLeft);
+q-=1;
+var visitorNoun =prompt('Enter a Noun '+questionsLeft);
 alert('you are done, Ready to see your story?');
 
 
